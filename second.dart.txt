@@ -1,0 +1,104 @@
+// ignore_for_file: sort_child_properties_last
+import 'package:flutter/material.dart';
+
+class second extends StatefulWidget {
+  const second({super.key});
+
+  @override
+  State<second> createState() => _secondState();
+}
+
+class _secondState extends State<second> {
+  int index = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Indexed Stack Widget'),
+        // backgroundColor: Color.fromARGB(255, 40, 0, 187),
+        foregroundColor: Colors.black,
+        shadowColor: const Color.fromARGB(255, 63, 59, 59),
+        elevation: 20,
+        titleSpacing: 60,
+        actions: const [
+          Icon(Icons.more_vert),
+        ],
+        actionsIconTheme: const IconThemeData(size: 30),
+      ),
+      bottomNavigationBar: BottomNavigationBar(items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.call, size: 30),
+          label: 'Call',
+        ),
+        BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              size: 30,
+            ),
+            label: 'Home',
+            backgroundColor: Color.fromARGB(255, 40, 0, 187)),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.search, size: 30),
+            label: 'Search',
+            backgroundColor: Color.fromARGB(255, 40, 0, 187)),
+      ]),
+      drawer: const Drawer(),
+      body: Center(
+        child: IndexedStack(
+          index: index,
+          children: [
+            SizedBox(
+                width: 400,
+                height: 300,
+                child: Card(
+                    child: Image.network(
+                        'https://imgs.search.brave.com/4jqT-QxAFfVLYJ5JiOeKL-ApvWxTpHS3rMqJzpBPH8c/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzYyL2Ux/LzE2LzYyZTExNmYy/N2UzMTVkMTlkMGU2/ZWZkOGE0ODZmZDFh/LmpwZw'))),
+            SizedBox(
+                width: 400,
+                height: 300,
+                child: Card(
+                    child: Image.network(
+                        'https://imgs.search.brave.com/TqZDbadnkxqEklFT6cI3Q4NohZ3zyMggWO7KcS-d0vc/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS50ZW5vci5jb20v/LXEwVWZMZ3B2T2dB/QUFBTS9ndXAtc2h1/cC1hdXItc2FiLXRo/aWstaGFpLmdpZg.jpeg'))),
+            SizedBox(
+                width: 400,
+                height: 300,
+                child: Card(
+                    child: Image.network(
+                        'https://imgs.search.brave.com/IBJ7dzwOQsb2Ubrn9IdU71rHpOCBai1ginHb36unXV8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNjEy/NDQxNTY0L3Bob3Rv/L3N1bmRhci1waWNo/YWktY2hpZWYtZXhl/Y3V0aXZlLW9mZmlj/ZXItb2YtZ29vZ2xl/LWluYy1zcGVha3Mt/ZHVyaW5nLWEtZ29v/Z2xlLXByb2R1Y3Qt/bGF1bmNoLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz05Zjk4/enhqcVRvTjlBQWp4/c1dubWtzeVp2Wmph/OTZJVU1sQXExOFo5/ajFjPQ'))),
+            SizedBox(
+                width: 400,
+                height: 300,
+                child: Card(
+                    child: Image.network(
+                        'https://imgs.search.brave.com/YAKrB7-1baT4zl5soY5vdG357jX4UX13JBH4P2Hso24/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzEzLzUy/LzgyLzEzNTI4MjQ4/NDE2ODdhZWY4NzBh/M2I1NGFlNzlmNzI2/LS1iaWxsLWdhdGVz/LWJpbGwtb2JyaWVu/LmpwZw'))),
+            SizedBox(
+                width: 400,
+                height: 300,
+                child: Card(
+                    child: Image.network(
+                        'https://imgs.search.brave.com/qwe9QnOLUck6V10SJstyM6Dm_1W_54ANa-n_4wQ1qPw/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuaW5kZXBlbmRl/bnQuY28udWsvMjAy/My8wNy8wMi8wMC8y/MDIzLTA2LTE2VDE3/MDMxNlpfNDg5MTAx/NjQ2X1JDMkZLMUEw/QkZXWV9SVFJNQURQ/XzNfRlJBTkNFLVRF/Q0gtTVVTSy5KUEc_/cXVhbGl0eT03NSZ3/aWR0aD02NDAmY3Jv/cD0zOjIsc21hcnQm/YXV0bz13ZWJw'))),
+            SizedBox(
+                width: 400,
+                height: 300,
+                child: Card(
+                    child: Image.network(
+                        'https://imgs.search.brave.com/c1Y0K90Bj0ZnVBAwf6uLMdWdavl_LvqchDpfqy9sRQg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/YXNraWRlYXMuY29t/L21lZGlhLzQ5L01y/LUJlYW4tVGFsa2lu/Zy1XaXRoLVRveS1G/dW5ueS1JbWFnZS5q/cGc'))),
+          ],
+        ),
+      ),
+      backgroundColor: Colors.lime,
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.arrow_right_alt),
+        onPressed: () {
+          setState(() {
+            if (index == 5) {
+              index = 0;
+            } else {
+              index = index + 1;
+            }
+          });
+        },
+      ),
+    );
+  }
+}
